@@ -1,3 +1,10 @@
+#My local folders
+my_audio_speech/
+my_samples/
+My_works/
+My_works2/
+/.idea/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
