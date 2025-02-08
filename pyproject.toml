@@ -1,0 +1,11 @@
+[project]
+requires-python = ">=3.10"  # Виправлено "prohject" → "project"
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+select = ["E", "F","W","N", "ANN", "UP", "I"]  # Лінтинг (Flake8 + Pyupgrade + Імпорти)
+
+[tool.ruff.format]
+quote-style = "double"  # Наприклад, змінити лапки на подвійні (необов'язково)
