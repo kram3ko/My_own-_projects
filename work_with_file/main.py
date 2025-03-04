@@ -12,19 +12,19 @@ def main():
         "read": user_service.read_user,
         "update": user_service.update_user,
         "delete": user_service.delete_user,
-        "stop": "stop"
 
     }
 
     while True:
-        print(f"allowed commands: {list(COMMANDS.keys())}")
+        print(f"allowed commands: {list(COMMANDS.keys()) + ["stop"]} ")
         command = input("please write yours command: ")
         if command == "stop":
             print("thank you for use our service see you later :)")
             break
+        operation = COMMANDS.get(command)
         try:
-            COMMANDS[command]()
-        except KeyError as e_info:
+            operation()
+        except TypeError:
             print("Wrong command! check allowed")
             continue
 
